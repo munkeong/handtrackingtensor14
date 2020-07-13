@@ -36,9 +36,9 @@ ADD . /opt/app-root/src/
 RUN pip3 install --upgrade pip
 RUN pip3 install -U virtualenv
 RUN pip3 install zipp==1.0.0
-RUN yum install -y libXrender
-RUN yum install -y libXrender1
-RUN yum install -y libXrender-dev
+RUN yum -y install libXrender
+RUN yum -y install libXrender1
+RUN yum -y install libXrender-dev
 
 #RUN pip3 install -r requirements.txt
 #RUN apt-get update

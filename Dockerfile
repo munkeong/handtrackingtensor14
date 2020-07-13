@@ -1,7 +1,19 @@
 #FROM nvidia/cuda:10.0-base-ubuntu16.04
 #FROM centos:7
-FROM python3.6
+#FROM centos/python-36-centos7
+#USER root
 #MAINTAINER  jeon
+
+FROM python:3.6
+
+RUN mkdir /src
+WORKDIR /src
+
+COPY requirements.txt /src/requirements.txt
+RUN pip install -r requirements.txt
+
+COPY . /src
+RUN pip install .
 
 
 
@@ -26,9 +38,9 @@ FROM python3.6
 
 #RUN mkdir -p /root/detection
 #WORKDIR /root/detection
-WORKDIR /opt/app-root/src
+#WORKDIR /opt/app-root/src
 #ADD . /root/detection/
-ADD . /opt/app-root/src/
+#ADD . /opt/app-root/src/
 
 
 #RUN apt-get update
@@ -50,10 +62,10 @@ ADD . /opt/app-root/src/
 #RUN pip3 install pillow
 #RUN pip3 install flask
 
- echo "TEST----1"
- pip3 install tensorflow-1.14.1-cp36-cp36m-linux_x86_64.whl
+ #echo "TEST----1"
+RUN pip3 install tensorflow-1.14.1-cp36-cp36m-linux_x86_64.whl
 #RUN pip3 list
- echo "TEST----2"
+# echo "TEST----2"
 
 #RUN unlink /usr/lib64/libm.so.6
 #RUN cp /opt/app-root/src/libm.so.6 /usr/lib64/
@@ -61,5 +73,5 @@ ADD . /opt/app-root/src/
 
 #CMD []
 #ENTRYPOINT ["/bin/bash"]
-CMD ["pip", "install tensorflow-1.14.1-cp36-cp36m-linux_x86_64.whl"]
+#CMD ["pip", "install tensorflow-1.14.1-cp36-cp36m-linux_x86_64.whl"]
 CMD ["python3", "app.py"]

@@ -8,3 +8,4 @@ Flask
 setuptools>=36
 six
 matplotlib==1.5.3
+libxrender-dev

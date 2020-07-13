@@ -56,9 +56,10 @@ ADD . /opt/app-root/src/
  echo "TEST----2"
 
 #RUN unlink /usr/lib64/libm.so.6
-RUN cp /opt/app-root/src/libm.so.6 /usr/lib64/
-EXPOSE 12000
+#RUN cp /opt/app-root/src/libm.so.6 /usr/lib64/
+#EXPOSE 5000
 
 #CMD []
 #ENTRYPOINT ["/bin/bash"]
+CMD ["pip", "install tensorflow-1.14.1-cp36-cp36m-linux_x86_64.whl"]
 CMD ["python3", "app.py"]

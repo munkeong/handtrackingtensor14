@@ -48,10 +48,11 @@ setup(
 
 
 '''Compile Protobufs'''
-import subprocess
-print("Compiling protobufs")
+#import subprocess
+#print("Compiling protobufs")
 try:
-    subprocess.Popen('protoc object_detection/protos/*.proto --python_out=.', shell=True)
+    print("Compiling protobufs")
+    #subprocess.Popen('protoc object_detection/protos/*.proto --python_out=.', shell=True)
 
 except:
     print("Error compiling Protobufs")

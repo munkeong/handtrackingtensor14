@@ -1,5 +1,6 @@
 #FROM nvidia/cuda:10.0-base-ubuntu16.04
-FROM centos:7
+#FROM centos:7
+FROM python3.6
 #MAINTAINER  jeon
 
 

@@ -3,9 +3,6 @@ numpy
 #Pillow>=1.0
 #Pillow
 Flask
-#ten
-
-#rflow==1.12.2
 #tensorflow==1.15.0
 #protobuf>=3.6.1
 setuptools>=36

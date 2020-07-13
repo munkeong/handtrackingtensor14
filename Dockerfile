@@ -50,10 +50,10 @@ ADD . /opt/app-root/src/
 #RUN pip3 install pillow
 #RUN pip3 install flask
 
-RUN echo "TEST----1"
-RUN pip3 install tensorflow-1.14.1-cp36-cp36m-linux_x86_64.whl
+ echo "TEST----1"
+ pip3 install tensorflow-1.14.1-cp36-cp36m-linux_x86_64.whl
 #RUN pip3 list
-RUN echo "TEST----2"
+ echo "TEST----2"
 
 #RUN unlink /usr/lib64/libm.so.6
 RUN cp /opt/app-root/src/libm.so.6 /usr/lib64/

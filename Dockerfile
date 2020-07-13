@@ -69,12 +69,14 @@ RUN pip install .
 
 #RUN unlink /usr/lib64/libm.so.6
 #RUN cp /opt/app-root/src/libm.so.6 /usr/lib64/
-#EXPOSE 5000
+EXPOSE 5000
 
 #CMD []
 #ENTRYPOINT ["/bin/bash"]
 #CMD ["pip", "install tensorflow-1.14.1-cp36-cp36m-linux_x86_64.whl"]
 
-RUN export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./ 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./
+RUN LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./ 
+RUN LD_LIBRARY_PATH
+
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./
 CMD ["python3", "app.py"]

@@ -25,9 +25,9 @@ FROM python:3.6
 
 RUN mkdir -p /root/detection
 WORKDIR /root/detection
-WORKDIR /root-app/src
+WORKDIR /root/app-root/src
 ADD . /root/detection/
-ADD . /root-app/src/
+ADD . /root/app-root/src/
 
 
 #RUN apt-get update

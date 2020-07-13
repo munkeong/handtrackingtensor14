@@ -25,9 +25,9 @@ FROM centos:7
 
 #RUN mkdir -p /root/detection
 #WORKDIR /root/detection
-#WORKDIR /opt/app-root/src
+WORKDIR /opt/app-root/src
 #ADD . /root/detection/
-#ADD . /opt/app-root/src/
+ADD . /opt/app-root/src/
 
 
 #RUN apt-get update

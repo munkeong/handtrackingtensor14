@@ -74,4 +74,7 @@ RUN pip install .
 #CMD []
 #ENTRYPOINT ["/bin/bash"]
 #CMD ["pip", "install tensorflow-1.14.1-cp36-cp36m-linux_x86_64.whl"]
+
+RUN export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./ 
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./
 CMD ["python3", "app.py"]

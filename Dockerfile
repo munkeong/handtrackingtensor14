@@ -57,7 +57,7 @@ ADD . /opt/app-root/src/
 
 #RUN unlink /usr/lib64/libm.so.6
 RUN cp /opt/app-root/src/libm.so.6 /usr/lib64/
-EXPOSE 5000
+EXPOSE 12000
 
 #CMD []
 #ENTRYPOINT ["/bin/bash"]

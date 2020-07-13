@@ -7,6 +7,4 @@ Flask
 #protobuf>=3.6.1
 setuptools>=36
 six
-libXrender
-libXrender1
 matplotlib==1.5.3

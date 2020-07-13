@@ -23,22 +23,22 @@ FROM centos:7
 #    && apt-get autoremove -y \
 #    && apt-get clean
 
-RUN mkdir -p /root/detection
-WORKDIR /root/detection
-WORKDIR /opt/app-root/src
-ADD . /root/detection/
-ADD . /opt/app-root/src/
+#RUN mkdir -p /root/detection
+#WORKDIR /root/detection
+#WORKDIR /opt/app-root/src
+#ADD . /root/detection/
+#ADD . /opt/app-root/src/
 
 
 #RUN apt-get update
 #RUN apt-get install wget
 
-RUN pip3 install --upgrade pip
-RUN pip3 install -U virtualenv
-RUN pip3 install zipp==1.0.0
-RUN yum -y install libXrender
-RUN yum -y install libXrender1
-RUN yum -y install libXrender-dev
+#RUN pip3 install --upgrade pip
+#RUN pip3 install -U virtualenv
+#RUN pip3 install zipp==1.0.0
+#RUN yum -y install libXrender
+#RUN yum -y install libXrender1
+#RUN yum -y install libXrender-dev
 
 #RUN pip3 install -r requirements.txt
 #RUN apt-get update
